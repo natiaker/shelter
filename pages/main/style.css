@@ -61,7 +61,8 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* start-screen section  */
+
+/* start-screen section */
 #start-screen-content {
     display: flex;
 }
