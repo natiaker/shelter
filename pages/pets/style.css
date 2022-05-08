@@ -1,1 +1,199 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+.header-container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    height: auto;
+}
+h1, h2, h3, h4, h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Header section  */
+header {
+    position: static;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+.logo {
+    height: auto;
+    text-align: center;
+}
+.logo a {
+    color:#545454;
+}
+.logo h1 {
+    font-size: 32px;
+    letter-spacing: 0.06em;
+}
+.logo p {
+    font-size: 13px;
+    margin-top: 10px;
+    letter-spacing: 0.1em;
+}
 
+nav {
+    margin: 20px;
+    margin-right: 0;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+} 
+nav ul a {
+    margin: 15px;
+    color: #545454;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+}
+.nav-highlighted {
+    color: #292929;
+    border-bottom: 3px solid #F1CDB3;
+}
+nav a:hover {
+    border-bottom: 3px solid #F1CDB3;
+    opacity: 0.9;
+}
+
+/* pets section  */
+#pets {
+    height: auto;
+    background-color: #F6F6F6;
+    width: 100%;
+}
+#pets-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#pets-content h3 {
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-bottom: 50px;
+}
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FAFAFA;
+    border-radius: 9px;
+    margin-bottom: 25px;    
+}
+.card:hover {
+    box-shadow:0px 0px 15px #cecece;
+    cursor: pointer;
+}
+.card:hover .card-button{
+    background-color: #F1CDB3;
+}
+.card p{
+    padding: 30px 98px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #545454;
+    font-size: 20px;
+    line-height: 23px; 
+    letter-spacing: 0.06em; 
+}
+.card a{
+    color: #292929;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: #FAFAFA;
+    padding: 15px 45px;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.navigation {
+    margin: 25px auto 0;
+}
+.navigation button {
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #F6F6F6;
+    color: #292929;
+    border: 2px solid #F1CDB3;
+    border-radius: 50%;
+    padding: 16px 22px;
+    margin: 3px 5px;
+}
+.navigation button:hover {
+    background-color: #F1CDB3;
+}
+.navigation button:disabled {
+    background-color: #F6F6F6;
+    border:2px solid #CDCDCD;
+    cursor:auto;
+}
+.navigation button:first-child, .navigation button:last-child {
+    padding: 16px 13px;
+}
+
+/* footer content  */
+#contacts {
+    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) #211F20;
+    height: auto;
+    width: 100%;
+    margin-top: -5px;
+}
+#footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+    padding-bottom: 0;
+}
+.contact-section h3 {
+    margin: 20px 0;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+.contact img {
+    width: 60px;
+    height: 32px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+}
+.contact h4 {
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+.info  {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 15px 0;
+}
