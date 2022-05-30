@@ -36,7 +36,9 @@ header {
     margin-top: 10px;
     letter-spacing: 0.1em;
 }
-
+#burger {
+    display: none;
+}
 nav {
     margin: 20px;
     margin-right: 0;
@@ -164,9 +166,17 @@ nav a:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 40px;
     padding-bottom: 0;
+}
+.wrap-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contact-section{
+    margin-right: 150px;
 }
 .contact-section h3 {
     margin: 20px 0;
@@ -196,4 +206,139 @@ nav a:hover {
     flex-direction: row;
     text-align: center;
     margin: 15px 0;
+}
+
+@media (max-width: 1280px) {
+    header{
+        width: 95%;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 30px;
+        position: fixed;
+        background-color: white;
+    }
+    /* pets section  */
+    #pets-content {
+        margin: 120px auto 0;
+        padding: 80px 40px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cards-container {
+        justify-content: space-evenly;
+    }
+    .card {
+        width: 40%;   
+        margin-bottom: 30px;
+    }
+
+    /* footer content  */
+    #footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-section {
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    .wrap-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #footer-puppy {
+        width: 31%;
+        margin: 65px auto 0;
+    }
+    .info {
+        width: 316px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 90%;
+        margin: 0;
+    }
+    .logo {
+        width: 186px;
+    }
+    nav ul {
+        display: none;
+    }
+    #burger {
+        display: flex;
+    }
+    #burger:hover {
+        transform: rotate(90deg);
+        background-color: #292929;
+    }
+
+    /* pets section  */
+    #pets-content {
+        margin: 120px auto 0;
+        padding: 42px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #pets-content h3 {
+        font-size: 25px;
+    }
+    .cards-container {
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .card {
+        width: 270px;   
+        margin-bottom: 30px;
+    }
+    .pets-sophia, .pets-timmy, .pets-Charly, .pets-scarlett, .pets-freddie {
+        display: none;
+    }
+    .navigation {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .navigation button {
+        font-size: 15px;
+        width: 52px;
+        height: 52px;
+        padding: 0;
+    }
+
+    /* footer section  */
+    #footer-content {
+        padding: 0;
+    }
+    .wrap-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact-section h3 {
+        font-size: 25px;
+    }
+    .contact img {
+        width: 40px;
+        height: 26px;
+        margin-right: 20px;
+    }
+    #footer-puppy {
+        width: 260px;
+        margin: 20px auto 0;
+    }
+    .info {
+        width: 100%;
+    }
 }
