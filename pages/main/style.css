@@ -37,7 +37,9 @@ header {
     margin-top: 10px;
     letter-spacing: 0.1em;
 }
-
+#burger, .burger-menu {
+    display: none;       
+}
 nav {
     margin: 20px;
     margin-right: 0;
@@ -61,8 +63,7 @@ nav a:hover {
     opacity: 0.9;
 }
 
-
-/* start-screen section */
+/* start-screen section  */
 #start-screen-content {
     display: flex;
 }
@@ -156,6 +157,9 @@ nav a:hover {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+.slider-responsive{
+    display: none;
+}
 .card {
     display: flex;
     flex-direction: column;
@@ -163,7 +167,6 @@ nav a:hover {
     background-color: #FAFAFA;
     border-radius: 9px;
     margin: 46px;
-    
 }
 .card:hover {
     box-shadow:0px 0px 15px #cecece;
@@ -245,6 +248,9 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
 }
+#list-responsive {
+    display: none;
+}
 .icons {
     display: flex;
     flex-direction: row;
@@ -258,7 +264,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
-.icons h4 {
+.icons h4, .wrapper h4 {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -335,9 +341,17 @@ nav a:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 40px;
     padding-bottom: 0;
+}
+.wrap-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contact-section{
+    margin-right: 150px;
 }
 .contact-section h3 {
     margin: 20px 0;
@@ -366,4 +380,338 @@ nav a:hover {
     flex-direction: row;
     text-align: center;
     margin: 15px 0;
+}
+
+@media (max-width: 1280px){
+    header {
+        max-width: 1200px;
+        margin: 40px; 
+    }
+
+    /* not only section */
+    #start-screen-content {
+        display: block;
+        margin: 60px 100px 0 100px;
+    }
+    #content-1 {
+        width: 460px;
+        margin: 60px auto 100px;
+    }
+    #content-1 a {
+        margin: 0 auto;
+    }
+    .img-content img{
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    /* about section */
+    #about-content {
+        width: 437px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction:column-reverse;
+        padding: 80px 0 100px;
+    }
+    #about-content img {
+        margin: 80px auto 0; 
+    }
+    #content-2 {
+        color: #4C4C4C;
+    }
+    #content-2 h3, #content-2 p {
+        width: 100%;
+    }
+
+    /* pet section  */
+    #pets-content {
+        padding: 80px 30px 100px;
+    }
+    .slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .card {
+        width: 30%;
+    }
+    .card p{
+        padding: 30px 0;
+    }
+    .woody-card {
+        display: none;
+    }
+
+    /* help section */
+    #help-content {
+        padding: 80px 70px 100px;
+    }   
+    #help-content h3 {
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-top: 10px;
+    }
+    #list {
+        display: none;
+    }
+    #list-responsive {
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .wrapper {
+        margin: 55px 60px;
+        width: 15%;
+    }
+
+    /* donation section  */
+    #donation-content {
+        margin: 0 auto;
+        flex-direction: column-reverse;
+        padding: 80px 194px 100px;
+    }
+    #donation-section-content {
+        margin: 0 auto;
+        margin-bottom: 60px; 
+    }
+
+    /* footer content  */
+    #footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-section {
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    .wrap-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #footer-puppy {
+        width: 31%;
+        margin: 65px auto 0;
+    }
+    .info {
+        width: 316px;
+    }
+    
+}
+
+@media (max-width: 768px){
+    header {
+        margin: 30px 53px 0 10px;
+    }
+    .logo {
+        width: 186px;
+    }
+    nav ul {
+        display: none;
+    }
+    #burger {
+        display: flex;
+    }
+    #burger:hover {
+        transform: rotate(90deg);
+        background-color: #292929;
+    }
+    .burger-menu {
+        display: block;
+
+    }
+
+    /* not only section */
+    #start-screen-content {
+        text-align: center;
+        margin: 42px 10px;
+    }
+    #content-1 h2 {
+        max-width: 300px;
+        font-size: 25px;
+        margin: 0 auto;
+    }
+    #content-1 p {
+        max-width: 300px;
+        margin: 42px auto;
+    }
+    #content-1 {
+        width: 100%;
+        margin: 60px auto 100px;
+    }
+    #content-1 a {
+        max-width: 170px;
+        font-size: 15px;
+        padding: 15px 45px;
+    }
+    .img-content img {
+        width: 260px;
+        margin-left: 0;
+        margin-bottom: -47px;
+    }
+   
+    /* about section */
+    #about-content {
+        max-width: 320px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction:column-reverse;
+        padding: 42px 0 42px;
+    }
+    #about-content img {
+        margin: 42px auto 0; 
+        width: 260px;
+    }
+    #content-2 {
+        color: #4C4C4C;
+        text-align: justify;
+    }
+    #content-2 h3 {
+        text-align: center;
+        font-size: 25px;  
+    }
+    #content-2 p {
+        margin: 25px auto;
+        max-width: 270px;
+    }
+
+     /* pet section  */
+    .jennifer-card {
+        display: none;
+    }
+    #pets-content {
+        padding: 42px 0 ;
+    }
+    #pets-content h3 {
+        width: 300px;
+        font-size: 25px;
+        margin: 0 auto;
+    }
+    .pets-content a {
+        padding: 15px 44px;
+    }
+    .card {
+        width: 270px;
+        margin: 42px auto 20px;
+    }
+    .slider {
+        display: none;
+    }
+    .slider-responsive {
+        display: flex;
+        flex-direction: column;
+    }
+    .arrow {
+        margin-top: 0;
+        margin-bottom: 42px;
+    }
+    .arrows {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 270px;
+        margin: 0 auto;
+    }
+
+    /* help section  */
+    #help-content {
+        padding: 42px 0;
+    }
+    #help-content h3 {
+        margin: 0 auto;
+        font-size: 25px;
+        width: 225px;
+    }
+    #list-responsive {
+        margin-top: 12px;
+        justify-content: flex-start;
+        width: 290px;
+        margin: 0 auto;
+    }
+    .wrapper {
+        margin: 30px auto;
+        width: 50%;
+    }
+    .wrapper h4 {
+        font-size: 15px;
+    }
+    .wrapper:last-child {
+        margin: 12px 0;
+    }
+
+    /* donation section  */
+    #donation-content {
+        margin: 0 auto;
+        flex-direction: column-reverse;
+        padding: 42px 0;
+    }
+    #donation-section-content {
+        margin: 0 auto;
+        margin-bottom: 60px; 
+    }
+    #donation-section-content h3 {
+        text-align: center;
+        font-size: 25px;
+        justify-content: center;
+    }
+    #donation-section-content h5 {
+        width: 273px;
+        margin: 20px auto;
+        font-size: 15px;
+    }
+    #credit-card-content a {
+        width: 250px;
+        margin: 0 auto 20px;
+    }
+    #credit-card-content h4 {
+        font-size: 15px;
+    }
+    #credit-card p {
+        width: 280px;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    #donation-dog {
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    /* footer section  */
+    #footer-content {
+        padding: 0;
+    }
+    .wrap-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact-section h3 {
+        font-size: 25px;
+    }
+    .contact img {
+        width: 40px;
+        height: 26px;
+        margin-right: 20px;
+    }
+    #footer-puppy {
+        width: 260px;
+        margin: 20px auto 0;
+    }
+    .info {
+        width: 100%;
+    }
+
 }
