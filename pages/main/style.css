@@ -37,7 +37,7 @@ header {
     margin-top: 10px;
     letter-spacing: 0.1em;
 }
-#burger, .burger-menu {
+#burger {
     display: none;       
 }
 nav {
@@ -353,6 +353,9 @@ nav a:hover {
 .contact-section{
     margin-right: 150px;
 }
+.br-responsive {
+    display: none;
+}
 .contact-section h3 {
     margin: 20px 0;
     font-size: 35px;
@@ -385,7 +388,7 @@ nav a:hover {
 @media (max-width: 1280px){
     header {
         max-width: 1200px;
-        margin: 40px; 
+        margin: 25px; 
     }
 
     /* not only section */
@@ -431,12 +434,13 @@ nav a:hover {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin: 10px auto 20px;
         width: 100%;
         margin-top: 10px;
         margin-bottom: 20px;
     }
     .card {
-        width: 30%;
+        margin: 40px 16px;
     }
     .card p{
         padding: 30px 0;
@@ -447,14 +451,15 @@ nav a:hover {
 
     /* help section */
     #help-content {
-        padding: 80px 70px 100px;
+        padding: 45px 70px 100px;
     }   
     #help-content h3 {
         font-size: 35px;
         line-height: 130%;
         letter-spacing: 0.06em;
         color: #545454;
-        margin-top: 10px;
+        margin-top: 64px;
+        margin-bottom: 45px;
     }
     #list {
         display: none;
@@ -467,25 +472,30 @@ nav a:hover {
         align-items: center;
     }
     .wrapper {
-        margin: 55px 60px;
-        width: 15%;
+        margin: 19px 60px;
+        width: 14%;
     }
 
     /* donation section  */
     #donation-content {
         margin: 0 auto;
         flex-direction: column-reverse;
-        padding: 80px 194px 100px;
+        padding: 40px 0 100px;
     }
     #donation-section-content {
         margin: 0 auto;
         margin-bottom: 60px; 
+    }
+    #donation-dog {
+        width: 505px;
+        margin-left: 130px;
     }
 
     /* footer content  */
     #footer-content {
         display: flex;
         flex-direction: column;
+        padding-top: 15px
     }
     .contact-section {
         justify-content: space-around;
@@ -497,8 +507,8 @@ nav a:hover {
         justify-content: center;
     }
     #footer-puppy {
-        width: 31%;
-        margin: 65px auto 0;
+        width: 300px;
+        margin: 25px auto 0;
     }
     .info {
         width: 316px;
@@ -506,26 +516,57 @@ nav a:hover {
     
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
+    body {
+        position: relative;
+    }
     header {
         margin: 30px 53px 0 10px;
+        padding-top: 30px;
     }
     .logo {
         width: 186px;
     }
+    .logo-display {
+        position: absolute;
+        top: 30px;
+        right: 126px;
+        z-index: 98;
+    }
     nav ul {
         display: none;
+    }
+    nav ul li {
+        width: 243px;
+    }
+    nav ul a {
+        font-size: 25px;
     }
     #burger {
         display: flex;
     }
-    #burger:hover {
+    .burger-transform {
+        position: absolute;
         transform: rotate(90deg);
-        background-color: #292929;
+        right: 53px;
+        top: 50px;
+        z-index: 97;
     }
     .burger-menu {
-        display: block;
-
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #211f20;
+        width: 320px;
+        height: 100%;
+        top: -50px;
+        right: 0px;
+        padding-top: 258px;
+        text-align: center; 
+    }
+    .burger-menu li {
+        margin: 40px;
     }
 
     /* not only section */
@@ -566,7 +607,7 @@ nav a:hover {
         padding: 42px 0 42px;
     }
     #about-content img {
-        margin: 42px auto 0; 
+        margin: 13px auto 0; 
         width: 260px;
     }
     #content-2 {
@@ -578,7 +619,7 @@ nav a:hover {
         font-size: 25px;  
     }
     #content-2 p {
-        margin: 25px auto;
+        margin: 20px auto;
         max-width: 270px;
     }
 
@@ -597,6 +638,9 @@ nav a:hover {
     .pets-content a {
         padding: 15px 44px;
     }
+    #pets-content-button {
+        margin-bottom: 20px;
+    }
     .card {
         width: 270px;
         margin: 42px auto 20px;
@@ -610,7 +654,7 @@ nav a:hover {
     }
     .arrow {
         margin-top: 0;
-        margin-bottom: 42px;
+        margin-bottom: 50px;
     }
     .arrows {
         display: flex;
@@ -622,25 +666,29 @@ nav a:hover {
 
     /* help section  */
     #help-content {
-        padding: 42px 0;
+        padding: 42px 0 20px;
     }
     #help-content h3 {
+        padding-top: 25px;
         margin: 0 auto;
         font-size: 25px;
         width: 225px;
     }
     #list-responsive {
-        margin-top: 12px;
+        padding-top: 20px;
         justify-content: flex-start;
         width: 290px;
         margin: 0 auto;
     }
     .wrapper {
-        margin: 30px auto;
+        margin: 15px auto;
         width: 50%;
     }
     .wrapper h4 {
         font-size: 15px;
+    }
+    .wrapper img {
+        width: 50px;
     }
     .wrapper:last-child {
         margin: 12px 0;
@@ -650,7 +698,7 @@ nav a:hover {
     #donation-content {
         margin: 0 auto;
         flex-direction: column-reverse;
-        padding: 42px 0;
+        padding: 45px 0 55px;
     }
     #donation-section-content {
         margin: 0 auto;
@@ -664,7 +712,8 @@ nav a:hover {
     #donation-section-content h5 {
         width: 273px;
         margin: 20px auto;
-        font-size: 15px;
+        font-size: 13px;
+        text-align: center;
     }
     #credit-card-content a {
         width: 250px;
@@ -681,11 +730,18 @@ nav a:hover {
     #donation-dog {
         width: 260px;
         margin: 0 auto;
+        margin-top: -20px;
     }
 
     /* footer section  */
     #footer-content {
         padding: 0;
+    }
+    .br {
+        display: none;
+    }
+    .br-responsive {
+        display: block;
     }
     .wrap-section {
         display: flex;
@@ -700,15 +756,20 @@ nav a:hover {
     }
     .contact-section h3 {
         font-size: 25px;
+        padding-top: 10px;
+    }
+    .contact h4 {
+        font-size: 19px;
     }
     .contact img {
         width: 40px;
         height: 26px;
-        margin-right: 20px;
+        margin-right: 10px;
+        margin-left: 20px;
     }
     #footer-puppy {
         width: 260px;
-        margin: 20px auto 0;
+        margin: 10px auto 0;
     }
     .info {
         width: 100%;
