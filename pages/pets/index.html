@@ -18,10 +18,10 @@
                 </a>
             </div>
             <nav>
-                <img id="burger" src="../../assets/icons/Burger.svg" alt="burger-icon">
-                <ul>
-                    <li><a href="#" class="nav-highlighted">About the shelter</a></li>
-                    <li><a href="../pets/index.html" target="_blank">Our pets</a></li>
+                <img id="burger" src="../../assets/icons/Burger_black.svg" alt="burger-icon">
+                <ul id="nav-bar">
+                    <li><a href="#">About the shelter</a></li>
+                    <li><a href="../pets/index.html" target="_blank" class="nav-highlighted">Our pets</a></li>
                     <li><a href="#help">Help the shelter</a></li>
                     <li><a href="#contacts">Contacts</a></li>
                 </ul>
@@ -86,7 +86,8 @@
             <div id="footer-content">
                 <div class="wrap-section">
                     <div class="contact-section">
-                        <h3>For questions <br> and suggestions</h3>
+                        <h3 class="br">For questions <br> and suggestions</h3>
+                        <h3 class="br-responsive">For questions and <br> suggestions</h3>
                         <div class="contact">
                             <div class="info">
                                 <img src="../../assets/icons/icon-email.svg" alt="email-icon">
@@ -99,8 +100,9 @@
                         </div>
                     </div>
                     <div class="contact-section">
-                        <h3>We are waiting <br> for your visit</h3>
-                        <div class="contact">
+                        <h3 class="br">We are waiting <br> for your visit</h3>
+                        <h3 class="br-responsive">We are waiting for <br> your visit</h3>
+                        <div class="contact map">
                             <div class="info">
                                 <img src="../../assets/icons/icon-marker.svg" alt="location-marker">
                                 <a href="https://goo.gl/maps/WJaFkNsnUhmDUdxw5" target="_blank"><h4>1 Central Street, Boston <br>(entrance from the store)</h4></a>
@@ -115,5 +117,15 @@
                 <img id="footer-puppy" src="../../assets/images/footer-puppy.png" alt="puppy-footer-section">
             </div>
     </footer>  
+    <script>
+        document.getElementById('burger').addEventListener('click', openBurger);
+
+        function openBurger() {
+            document.getElementById('nav-bar').classList.toggle('burger-menu');
+            document.getElementById('burger').classList.toggle('burger');
+            document.getElementById('burger').classList.toggle('burger-transform');
+            document.querySelector(".logo").classList.toggle('logo-display');
+        }
+    </script>
 </body>
 </html>
