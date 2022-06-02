@@ -175,6 +175,9 @@ nav a:hover {
     flex-direction: row;
     justify-content: space-between;
 }
+.br-responsive {
+    display: none;
+}
 .contact-section{
     margin-right: 150px;
 }
@@ -217,13 +220,22 @@ nav a:hover {
         position: fixed;
         background-color: white;
     }
+    nav {
+        margin: 16px 17px 20px 0;
+    }
+    nav ul a{
+        margin: 18px;
+    }
     /* pets section  */
     #pets-content {
         margin: 120px auto 0;
-        padding: 80px 40px 100px;
+        padding: 80px 40px 75px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    #pets-content h3 {
+        margin-bottom: 38px;
     }
     .cards-container {
         justify-content: space-evenly;
@@ -232,11 +244,27 @@ nav a:hover {
         width: 40%;   
         margin-bottom: 30px;
     }
+    .pets-scarlett, .pets-freddie {
+        display: none;
+    }
+    .navigation {
+        margin: -15px auto 0;
+    }
 
     /* footer content  */
     #footer-content {
         display: flex;
         flex-direction: column;
+        padding: 15px 40px 0;
+    }
+    .br {
+        display: inline;
+    }
+    .br-responsive {
+        display: none;
+    }
+    #contacts {
+        margin-bottom: -20px;
     }
     .contact-section {
         justify-content: space-around;
@@ -248,31 +276,74 @@ nav a:hover {
         justify-content: center;
     }
     #footer-puppy {
-        width: 31%;
-        margin: 65px auto 0;
+        width: 300px;
+        margin: 24px auto 0;
     }
     .info {
         width: 316px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    body {
+        position: relative;
+    }
     header {
-        width: 90%;
+        padding: 30px 10px;
+        width: 100%;
         margin: 0;
     }
     .logo {
         width: 186px;
     }
+    .logo-display a {
+        color: #F1CDB3;
+        position: absolute;
+        top: 30px;
+        right: 126px;
+        z-index: 98;
+    }
+    nav {
+        margin: 21px 40px 20px 0;
+    }
     nav ul {
         display: none;
+    }
+    nav ul li {
+        width: 243px;
+    }
+    nav ul a {
+        color: #F1CDB3;
+        font-size: 25px;
+    }
+    .nav-highlighted {
+        color: #F1CDB3;
     }
     #burger {
         display: flex;
     }
-    #burger:hover {
+    .burger-transform {
+        position: absolute;
         transform: rotate(90deg);
-        background-color: #292929;
+        right: 53px;
+        top: 50px;
+        z-index: 97;
+    }
+    .burger-menu {
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #211f20;
+        width: 320px;
+        height: 823px;
+        top: -50px;
+        right: 0px;
+        padding-top: 258px;
+        text-align: center; 
+    }
+    .burger-menu li {
+        margin: 40px;
     }
 
     /* pets section  */
@@ -285,6 +356,7 @@ nav a:hover {
     }
     #pets-content h3 {
         font-size: 25px;
+        margin-top: 10px;
     }
     .cards-container {
         margin: 0 auto;
@@ -315,11 +387,23 @@ nav a:hover {
     #footer-content {
         padding: 0;
     }
+    .br {
+        display: none;
+    }
+    .br-responsive {
+        display: inline;
+    }
     .wrap-section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+    }
+    .contact {
+        margin-left: 30px;
+    }
+    .map {
+        margin-left: 0;
     }
     .contact-section {
         display: flex;
