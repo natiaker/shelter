@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="dim"></div>
     <div class="container1">
         <header>
             <div class="logo">
@@ -19,7 +20,7 @@
             </div>
             <nav>
                 <img id="burger" src="../../assets/icons/Burger.svg" alt="burger-icon">
-                <ul id="nav-bar">
+                <ul id="nav-bar" class="burger-menu" >
                     <li><a href="#" class="nav-highlighted">About the shelter</a></li>
                     <li><a href="../pets/index.html">Our pets</a></li>
                     <li><a href="#help">Help the shelter</a></li>
@@ -91,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="../pets/index.html" target="_blank" id="pets-content-button">Get to know the rest</a>
+                <a href="../pets/index.html" id="pets-content-button">Get to know the rest</a>
             </div>
     </section>
     <section id="help">
@@ -233,16 +234,6 @@
                 <img id="footer-puppy" src="../../assets/images/footer-puppy.png" alt="puppy-footer-section">
             </div>
     </footer>  
-
-    <script>
-        document.getElementById('burger').addEventListener('click', openBurger);
-
-        function openBurger() {
-            document.getElementById('nav-bar').classList.toggle('burger-menu');
-            document.getElementById('burger').classList.toggle('burger');
-            document.getElementById('burger').classList.toggle('burger-transform');
-            document.querySelector(".logo").classList.toggle('logo-display');
-        }
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
