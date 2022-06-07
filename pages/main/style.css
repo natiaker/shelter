@@ -37,6 +37,9 @@ header {
     margin-top: 10px;
     letter-spacing: 0.1em;
 }
+.logo2 {
+    display: none;
+}
 #burger {
     display: none;       
 }
@@ -520,22 +523,37 @@ nav a:hover {
     body {
         position: relative;
     }
+    .scroll {
+        overflow: hidden;
+    }
     header {
         margin: 30px 53px 0 10px;
         padding-top: 30px;
     }
-    .logo {
+    .dimmer {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #29292999;
+    }
+    .logo2 {
+        display: block;
+        position: fixed;
         width: 186px;
+        top: 30px;
+        right: -250px;
+        transition: all 1s ease-in-out;
+        z-index: 100;
     }
     .logo-display {
-        position: absolute;
+        display: flex;
         top: 30px;
         right: 126px;
         z-index: 98;
     }
-    nav ul {
-        display: none;
-    }
+
     nav ul li {
         width: 243px;
     }
@@ -544,26 +562,37 @@ nav a:hover {
     }
     #burger {
         display: flex;
+        position: fixed;
+        right: 53px;
+        top: 50px;
+        z-index: 101;
+        transition: all 1s ease-in-out;
     }
     .burger-transform {
         position: absolute;
         transform: rotate(90deg);
         right: 53px;
         top: 50px;
-        z-index: 97;
+        z-index: 100;
     }
     .burger-menu {
-        position: absolute;
-        display:flex;
+        position: fixed;
+        display: flex;
         flex-direction: column;
         justify-content: flex-start;
         background-color: #211f20;
         width: 320px;
-        height: 823px;
+        height: 100%;
         top: -50px;
-        right: 0px;
+        right: -320px;
         padding-top: 258px;
         text-align: center; 
+        z-index: 40;
+        transition: all 1s ease-in-out;
+    }
+    .burger-menu.open {
+        right: 0px;
+        z-index: 45;
     }
     .burger-menu li {
         margin: 40px;
