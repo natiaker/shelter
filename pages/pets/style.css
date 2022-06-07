@@ -336,7 +336,7 @@ nav a:hover {
     }
     #burger {
         display: flex;
-        position: fixed;
+        position: absolute;
         right: 53px;
         top: 50px;
         z-index: 101;
